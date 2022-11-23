@@ -27,43 +27,43 @@ printf("The Armstrong numbers are: ");
   for(i=min;i<=max;i++){
       if(isArmstrong(i)){ // factorial
             printf("%d " , i );
-        //   break;
+       
     
       }
   }
-printf("\n");
+//printf("\n");
 
-printf("The Palindromes are: ");   
+printf("\nThe Palindromes are: ");   
 for(i=min;i<=max;i++){
     if(isPalindrome(i)){ 
           printf( "%d ", i);
-        //  break;
-    
-    }
-}
-printf("\n");
-
-
-printf("The Prime numbers are: ");
-for(i= min;i<=max;i++){
-        int ans= isPrime(i);
-        if(ans){
-          printf("%d " , i );
-          //break;
         
-        }
-}
-printf("\n");
-
-printf("The Strong numbers are: ");
-for(i=min;i<=max;i++){
-    if(isStrong(i)){ // power
-            printf("%d " , i );
-        //  break;
     
     }
 }
 //printf("\n");
+
+
+printf("\nThe Prime numbers are: ");
+for(i= min;i<=max;i++){
+        int ans= isPrime(i);
+        if(ans){
+          printf("%d " , i );
+      
+        
+        }
+}
+// printf("\n");
+
+printf("\nThe Strong numbers are: ");
+for(i=min;i<=max;i++){
+    if(isStrong(i)){ // power
+            printf("%d " , i );
+       
+    
+    }
+}
+printf("\n");
 
 return 0;
 
