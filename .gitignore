@@ -1,0 +1,14 @@
+advancedClassificationLoop.o
+advancedClassificationRecursion.o
+basicClassification.o
+*.o
+*.a
+*.so
+*.txt
+main
+mains
+maindrec
+maindloop
+.vscode/
+NumClass.h.gch
+
