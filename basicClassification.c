@@ -4,18 +4,15 @@ int fact(int);
 //countDigits - is used in order to simplify the recursions in both isArmstrong and isPalindrom
 int countDigits(int); 
 //calcPower - calculates the digit's power in recursion
-int calcPower(int,int); 
+//int calcPower(int,int); 
 
 
-int calcPower(int digit, int power){
-    if (power==1){
-        return digit;
-    }
-    return digit*calcPower(digit,power-1);
 
-}
 
 int countDigits(int num){
+      if(!num){ //edge case
+        return 1;
+    }
     int count =0;
     while (num>0){
         count=count+1;
@@ -29,34 +26,44 @@ int fact(int digit ){
     if(digit==0){
         return 1;
     }
+    if(digit==1){
+        return 1;
+    }
     return digit*fact(digit-1);
 }
 
 // is prime
 
  int isPrime(int num){
+    if(!num){ //edge case
+        return 0;
+    }
     int i=2;
-    int bool =1;
-    for(i=2; i<num && bool==1; i++)
+    for(i=2; i<num ; i++)
         if(num%i ==0 ){
-            bool=0;
+            return 0;
         }
 
-    return bool;
+    return 1;
 
  }
 
 //is strong
 
 int isStrong(int num){
+    
     int original=num;
     int sumFact=0;
+      if(!num){ //edge case
+        return 0;
+    }
+
     while (num>0){
         sumFact=sumFact+ fact(num%10);
         num=num/10;
     }
     if(sumFact == original )
-        return 1;
+        return 1;  
     else 
         return 0;
 
