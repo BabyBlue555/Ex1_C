@@ -1,29 +1,44 @@
 
 int countDigits(int ); 
 int calcPower(int,int ); 
-int armstrong(int , int );
+// int armstrong(int , int );
 
 
 
-// a helping recursion function for isArmstrong
-int armstrong(int num, int numDigits){
-    if(num==0){ // if num==0
-        return 0;
-    }
-    else
-        return calcPower((num%10),numDigits)+ armstrong(num/10,numDigits);
-}
+// // a helping recursion function for isArmstrong
+// int armstrong(int num, int numDigits){
+//     if(num==0){ // if num==0
+//         return 0;
+//     }
+//     else
+//         return calcPower((num%10),numDigits)+ armstrong(num/10,numDigits);
+// }
+
+// int isArmstrong(int num ){
+//     int ans = armstrong(num, countDigits(num));
+//     if(ans){
+//         return 1;
+//     }
+//     else{
+//         return 0;
+//     }
+// }
 
 int isArmstrong(int num ){
-    int ans = armstrong(num, countDigits(num));
-    if(ans){
-        return 1;
-    }
-    else{
-        return 0;
-    }
+int original = num;
+int power=countDigits(num);
+int sumPower=0;
+while (num>0){
+    sumPower= sumPower+ calcPower(num%10, power);
+    num=num/10;
 }
-
+if(sumPower== original){
+    return 1;
+}
+else{
+    return 0;
+}
+}
 
 
 
