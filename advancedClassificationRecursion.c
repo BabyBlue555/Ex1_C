@@ -10,10 +10,10 @@ int isArmHelp(int, int );
 
 int isArmHelp(int num, int count){
     if(num<10){ // if it's a digit, return it using pow() function
-        return (int)(pow(num,count));
+        return (int)pow(num,count);
     }
     else{
-        return((int)(pow(num%10,count))+isArmHelp(num/10,count));
+        return((int)pow(num%10,count)+isArmHelp(num/10,count));
     }
 }
 
@@ -35,7 +35,7 @@ int reverse(int num){ // order= num_of_Digits-1
         return 0;
     }
     
-    return ((num%10)*(int)(pow(10,order))+reverse(num/10));
+    return ((num%10)*(int)pow(10,order)+reverse(num/10));
  
 
 } 

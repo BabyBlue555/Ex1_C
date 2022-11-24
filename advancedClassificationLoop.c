@@ -9,7 +9,7 @@ int original = num;
 int count=countDigits(num);
 int sumPower=0;
 while (num>0){
-    sumPower= sumPower+ (int)(pow(num%10, count));
+    sumPower= sumPower+ (int)pow(num%10, count);
     num=num/10;
 }
 if(sumPower== original){
