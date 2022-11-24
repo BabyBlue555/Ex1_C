@@ -30,11 +30,11 @@ mains: $(OBJECTS_MAIN) libclassrec.a
 
 
 maindloop: $(OBJECTS_MAIN) libclassloops.so
-	$(CC) $(FLAGS)  $(OBJECTS_MAIN) ./libclassloops.so -o maindloop -lm
+	$(CC) $(FLAGS) $(OBJECTS_MAIN) ./libclassloops.so -o maindloop -lm
 
 
 maindrec: $(OBJECTS_MAIN) libclassrec.so
-	$(CC) $(FLAGS) $(OBJECTS_MAIN) ./libclassrec.so -o maindrec -lm
+	$(CC) $(FLAGS)  $(OBJECTS_MAIN) ./libclassrec.so -o maindrec -lm
 
 # libraries
 
@@ -47,10 +47,10 @@ libclassrec.a: $(OBJECTS_REC) $(OBJECTS_BASE)
 
 
 libclassloops.so: $(OBJECTS_LOOP) $(OBJECTS_BASE) 
-	$(CC) $(FLAGS) –fPIC -shared -o libclassloops.so $(OBJECTS_LOOP) $(OBJECTS_BASE) 
+	$(CC) $(FLAGS)  -shared –fPIC -o libclassloops.so $(OBJECTS_LOOP) $(OBJECTS_BASE) 
   
 libclassrec.so: $(OBJECTS_REC) $(OBJECTS_BASE) 
-	$(CC) $(FLAGS) –fPIC -shared -o libclassrec.so $(OBJECTS_REC) $(OBJECTS_BASE) 
+	$(CC) $(FLAGS) -shared –fPIC -o libclassrec.so $(OBJECTS_REC) $(OBJECTS_BASE) 
 
 
 # compiling the o. files
