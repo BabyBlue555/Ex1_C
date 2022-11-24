@@ -30,7 +30,7 @@ mains: $(OBJECTS_MAIN) libclassrec.a
 
 
 maindloop: $(OBJECTS_MAIN) libclassloops.so
-	$(CC) $(FLAGS) $(OBJECTS_MAIN) ./libclassloops.so -o maindloop -lm
+	$(CC) $(FLAGS)  $(OBJECTS_MAIN) ./libclassloops.so -o maindloop -lm
 
 
 maindrec: $(OBJECTS_MAIN) libclassrec.so
