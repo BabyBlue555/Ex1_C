@@ -54,36 +54,36 @@ int fact(int digit ){
 int isStrong(int num){
 
 
-     int sum = 0;
-    int count = countDigits(num);
+    //  int sum = 0;
+    // int count = countDigits(num);
 
-    for (int i = 0; i < count; i++)
-    {
-        int digit = num/(int)pow(10,i)%10;
-        sum = sum + fact(digit);
-    }
+    // for (int i = 0; i < count; i++)
+    // {
+    //     int digit = num/(int)pow(10,i)%10;
+    //     sum = sum + fact(digit);
+    // }
 
-    if (sum == num)
-    {
-        return 1;
-    }
-    else{
-        return 0;
-    }    
+    // if (sum == num)
+    // {
+    //     return 1;
+    // }
+    // else{
+    //     return 0;
+    // }    
     
-    // int original=num;
-    // int sumFact=0;
-    //   if(!num){ //edge case
-    //     return 0;
-    // }
+    int original=num;
+    int sumFact=0;
+      if(!num){ //edge case
+        return 0;
+    }
 
-    // while (num>0){
-    //     sumFact=sumFact+ fact(num%10);
-    //     num=num/10;
-    // }
-    // if(sumFact == original )
-    //     return 1;  
-    // else 
-    //     return 0;
+    while (num>0){
+        sumFact=sumFact+ fact(num%10);
+        num=num/10;
+    }
+    if(sumFact == original )
+        return 1;  
+    else 
+        return 0;
 
 }

@@ -9,10 +9,10 @@ double pow(double , double);
 
 int isArmHelp(int num, int count){
     if(num<10){ // if it's a digit, return it using pow() function
-        return pow(num,count);
+        return (int)(pow(num,count));
     }
     else{
-        return(pow(num%10,count)+isArmHelp(num/10,count));
+        return((int)(pow(num%10,count))+isArmHelp(num/10,count));
     }
 }
 
@@ -29,7 +29,7 @@ int isArmstrong(int num ){
 
 // helping function for isPalindrom
 int reverse(int num){ // order= num_of_Digits-1
-    int order=(int)log10(num);
+    int order=(int)(log10(num));
     if(num==0){
         return 0;
     }
