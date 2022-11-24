@@ -1,3 +1,6 @@
+#ifndef FUNCS
+#define FUNCS
+
 int isArmstrong(int);
 
 /*
@@ -20,3 +23,6 @@ number. For Example: 145 is strong number
 
 
 int isStrong(int);
+
+
+#endif
