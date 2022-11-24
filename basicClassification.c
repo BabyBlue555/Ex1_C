@@ -5,7 +5,7 @@ int fact(int);
 int countDigits(int); 
 //calcPower - calculates the digit's power in recursion
 //int calcPower(int,int); 
-
+double pow(double , double);
 
 
 
@@ -38,12 +38,13 @@ int fact(int digit ){
     if(!num){ //edge case
         return 0;
     }
-    int i=2;
-    for(i=2; i<num ; i++)
-        if(num%i ==0 ){
+    for (int i = 2; i <= num/2; i++)
+    {
+        if (num%i == 0)
+        {
             return 0;
         }
-
+    }
     return 1;
 
  }
@@ -51,20 +52,38 @@ int fact(int digit ){
 //is strong
 
 int isStrong(int num){
-    
-    int original=num;
-    int sumFact=0;
-      if(!num){ //edge case
-        return 0;
+
+
+     int sum = 0;
+    int count = countDigits(num);
+
+    for (int i = 0; i < count; i++)
+    {
+        int digit = num/(int)pow(10,i)%10;
+        sum = sum + fact(digit);
     }
 
-    while (num>0){
-        sumFact=sumFact+ fact(num%10);
-        num=num/10;
+    if (sum == num)
+    {
+        return 1;
     }
-    if(sumFact == original )
-        return 1;  
-    else 
+    else{
         return 0;
+    }    
+    
+    // int original=num;
+    // int sumFact=0;
+    //   if(!num){ //edge case
+    //     return 0;
+    // }
+
+    // while (num>0){
+    //     sumFact=sumFact+ fact(num%10);
+    //     num=num/10;
+    // }
+    // if(sumFact == original )
+    //     return 1;  
+    // else 
+    //     return 0;
 
 }
