@@ -37,7 +37,6 @@ maindrec: $(OBJECTS_MAIN) libclassrec.so
 	$(CC) $(FLAGS) $(OBJECTS_MAIN) ./libclassrec.so -o maindrec -lm
 
 # libraries
-# check if ranlib is ok
 
 libclassloops.a: $(OBJECTS_LOOP) $(OBJECTS_BASE) 
 	$(AR) -rcs libclassloops.a $(OBJECTS_LOOP) $(OBJECTS_BASE) 

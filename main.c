@@ -25,7 +25,7 @@ int i=0;
 
 printf("The Armstrong numbers are: ");
   for(i=min;i<=max;i++){
-      if(isArmstrong(i)){ // factorial
+      if(isArmstrong(i)){
             printf("%d " , i );
        
     
