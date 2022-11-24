@@ -47,10 +47,10 @@ libclassrec.a: $(OBJECTS_REC) $(OBJECTS_BASE)
 
 
 libclassloops.so: $(OBJECTS_LOOP) $(OBJECTS_BASE) 
-	$(CC) $(FLAGS)  -shared -o libclassloops.so $(OBJECTS_LOOP) $(OBJECTS_BASE) 
+	$(CC) -fPIC $(FLAGS)  -shared -o libclassloops.so $(OBJECTS_LOOP) $(OBJECTS_BASE) 
   
 libclassrec.so: $(OBJECTS_REC) $(OBJECTS_BASE) 
-	$(CC) $(FLAGS) -shared -o libclassrec.so $(OBJECTS_REC) $(OBJECTS_BASE) 
+	$(CC) -fPIC $(FLAGS) -shared -o libclassrec.so $(OBJECTS_REC) $(OBJECTS_BASE) 
 
 
 # compiling the o. files
