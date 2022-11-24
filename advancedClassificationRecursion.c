@@ -4,6 +4,7 @@ int countDigits(int );
 int reverse(int );
 double log10(double);
 double pow(double , double);
+int isArmHelp(int, int );
 // int armstrong(int , int );
 
 
