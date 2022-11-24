@@ -6,10 +6,10 @@ double pow(double,double);
 
 int isArmstrong(int num ){
 int original = num;
-int power=countDigits(num);
+int count=countDigits(num);
 int sumPower=0;
 while (num>0){
-    sumPower= sumPower+ pow(num%10, power);
+    sumPower= sumPower+ (int)(pow(num%10, count));
     num=num/10;
 }
 if(sumPower== original){
@@ -32,7 +32,7 @@ int isPalindrome(int num){
     //int order=1;
 
     while(num>0){
-        reverse= reverse*10+num%10;
+        reverse= reverse*10+(num%10);
         num=num/10;
       //  order=order+1;
     }
